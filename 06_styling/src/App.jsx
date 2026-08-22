@@ -1,4 +1,7 @@
 import React from 'react'
+import Navbar from './components/Navbar';
+import Men from './components/Men';
+import Women from './components/Women';
 
 const App = () => {
 
@@ -8,6 +11,8 @@ const App = () => {
 
   return (
     <div>
+      <Men/>
+      <Women/>
       <button
         onClick={function(){
           btnClicked(10)
