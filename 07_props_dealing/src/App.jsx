@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Washroom from './components/Washroom'
+import Card from './components/Card'
 
 const App = () => {
 
@@ -14,13 +15,16 @@ const App = () => {
       setGender('Male')
     }
   }
-
+  
   return (
     <div className='parent'>
       <h1>Your gender is ~ {gender}</h1>
       <button onClick={changeGender}>Change Gender</button>
 
       <Washroom user={gender} />
+
+      
+
     </div>
   )
 }
