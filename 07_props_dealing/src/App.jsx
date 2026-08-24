@@ -1,30 +1,17 @@
-import React, { useState } from 'react'
-import Washroom from './components/Washroom'
+import React from 'react'
 import Card from './components/Card'
+
 
 const App = () => {
 
-  const [gender, setGender] = useState('Male')
+  const users = ['Anubhav','Sarthak','Harsh','Chetan']
 
-  function changeGender() {
-    if (gender == 'Male') {
-      setGender('Female')
-    } else if (gender == 'Female') {
-      setGender('Other')
-    }else {
-      setGender('Male')
-    }
-  }
-  
+
   return (
-    <div className='parent'>
-      <h1>Your gender is ~ {gender}</h1>
-      <button onClick={changeGender}>Change Gender</button>
-
-      <Washroom user={gender} />
-
-      
-
+    <div className='p-3 h-screen text-red-600 bg-black'>
+      {users.map(function(elem){
+        return <Card user={elem} />
+      })}
     </div>
   )
 }
